@@ -2,10 +2,17 @@ logging:
   level:
     '[org.springframework.cloud.config]': debug
 server:
-  port: 8888
+  port: 8889
 spring:
   application:
     name: cs-config-server
+#  profiles:
+#    active: native
+#  cloud:
+#    config:
+#      server:
+#        native:
+#          search-locations: "classpath:/config"
   cloud:
     config:
       server:
@@ -15,3 +22,7 @@ spring:
           searchPaths: '{application}'
           basedir: D:\\STS_WORKSPACE\\MSERV2\\git
           cloneOnStart: true
+          default-label: main
+          tineour: 5
+encrypt:
+  key: "89YUHE45WmjkA868RE"
