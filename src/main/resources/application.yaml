@@ -4,6 +4,11 @@ logging:
 server:
   port: 8889
 spring:
+#  rabbitmq:
+#    host: "localhost"
+#    username: "guest"
+#    password: "guest"
+#    port: 5672
   application:
     name: cs-config-server
 #  profiles:
@@ -23,6 +28,11 @@ spring:
           basedir: D:\\STS_WORKSPACE\\MSERV2\\git
           cloneOnStart: true
           default-label: main
-          tineour: 5
-encrypt:
-  key: "89YUHE45WmjkA868RE"
+          timeout: 5
+#encrypt:
+#  key: "89YUHE45WmjkA868RE"
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
